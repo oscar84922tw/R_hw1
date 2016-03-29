@@ -31,7 +31,7 @@ print(mft);
 # (b)
 rep(seq(from = 1,to = 5),5);
 
-# Q3
+# Q3 Done
 # (a)
 ye <- c(61,175,111,124,13,21,24,23,4,18,14,18);
 x = matrix(ye,nrow=4, ncol=3);
@@ -39,7 +39,7 @@ x = matrix(ye,nrow=4, ncol=3);
 # (b)
 x[1,3];
 
-# Q4
+# Q4 Done
 Sigma = function(i){
   sum = 0;
   for(t in 1:i){
@@ -74,7 +74,7 @@ Newton = function(f){
   
 }
 
-# Q6
+# Q6 Done
 resultTxt <- read.table("results.txt",header = TRUE, sep = "\t");
 female <- resultTxt[which(resultTxt == "f"),];
 female1 <- female[,2];
@@ -111,4 +111,33 @@ lgamma(5000+1)
 factorial(4)/factorial(2)
 factorial(50)/factorial(20)
 #lgamma(5000+1)/lgamma(2000+1)
-  
+
+# Q8 Done
+# (a)
+ic <- c(1:100)
+TS <- intersect(which(ic%%3 != 0),which(ic%%2 != 0))
+intersect(TS,which(ic%%7 != 0))
+
+# (b)
+htn <- diag(1,10,10)
+htn[which(htn == 0)] <- 5
+
+# Q9
+prime_num = function(n){
+t=0;
+  while(t<n){
+i=2
+while(i<n){
+    if(n%%i==0){
+     
+      break;
+    }
+  i=i+1;
+}
+if(i==(n-1)){
+  print(n)
+}
+t = t+1
+  }
+}
+
